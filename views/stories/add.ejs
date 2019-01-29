@@ -1,0 +1,82 @@
+<% include ../partials/header %>
+
+<form action="/stories" method="post">
+    <div class="container">
+    <h2 style="font-family: 'Sarabun', sans-serif;">Add Your Blog</h2> 
+    <br>
+    <div class="form-group">
+        <label for="formGroupExampleInput">Title</label>
+        <input type="text" class="form-control" name="title" id="title" placeholder="Title of the Blog">
+    </div>
+
+    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
+    <select class="custom-select my-1 mr-sm-2" id="preference" namfreetutorials.eue="preference" name="status">
+        <option value="public" selected>Public</option>
+        <option value="private">Private</option>
+        <option value="unprotected">Unpublished</option>
+    </select>
+    <br><br>
+
+    <div class="checkbox">
+        <label><input type="checkbox" name="allowComments">Allow Comments</label>
+    </div>
+
+    <br>
+    <div class="form-group">
+        
+        <label for="comment">Your Story:</label>
+        <textarea class="form-control" name="body" rows="5" id="body"></textarea>
+        <script>
+            CKEDITOR.replace('body');
+        </script>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+
+<!-- <div class="container">
+<h1>Add story</h1>
+<div class="row">
+    <form action="/stories" method="POST">
+        <div class="form-group">
+        <div class="row">
+            <div class="input-field">
+                <label for="title">Title</label>
+                <input type="text" name="title">
+            </div>
+        </div>
+        </div>
+
+        <div class="row">
+            <label for="status">Status</label><span style="width:10%;"></span>
+            <div class="input-field ">
+                <select name="status" class="form-control">
+                    <option value="public" selected>Public</option>
+                    <option value="private">Private</option>
+                    <option value="unpublished">Unpublished</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <p>
+                <input type="checkbox" name="allowComments" class="field-in" id="filled-in-box" checked="checked">
+                <label for="allowComments">Allow Comments</label>
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <h5>Tell Us Your Story: </h5>
+                <textarea name="body"></textarea>
+            </div>
+        </div>
+    <input type="submit" value="save" class="btn btn-primary">
+
+    </form> -->
+<!-- </div>
+</div> -->
+<% include ../partials/footer %>

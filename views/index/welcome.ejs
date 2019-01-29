@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+
+<br>
+
+<center>
+    <h1 class="animated flip">Welcome to Paparazzone </h1>
+    <br>
+    <% if (user) { %>
+    <% } else { %>
+    <a href = "/auth/google">
+    <button class="btng"><i class="fa fa-google"></i> <strong>Signin with Google</strong></button>
+    </a>
+    <% } %>
+</center>
+
+<% include ../partials/footer %>
